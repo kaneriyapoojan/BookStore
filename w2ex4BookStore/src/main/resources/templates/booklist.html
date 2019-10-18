@@ -6,6 +6,14 @@
 	<link type="text/css"rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" /> 
 </head>
 <body>
+	<div>
+		<h3 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3>
+	</div>
+	<div style="padding:20px 0">
+		<form th:action="@{/logout}" method="post">
+			<input type="submit" value="Sign Out" class="btn btn-sm btn-danger"/>
+		</form>
+	</div>
 	<h1>Books</h1>
     <table class="table table-striped">
 		<tr><th>Author</th><th>Title</th><th>ISBN</th><th>Year</th><th>Price</th></tr>
