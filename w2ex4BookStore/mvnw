@@ -81,18 +81,18 @@ if [ -z "$M2_HOME" ] ; then
     ls=`ls -ld "$PRG"`
     link=`expr "$ls" : '.*-> \(.*\)$'`
     if expr "$link" : '/.*' > /dev/null; then
-      PRG="$link"
+      PRG ="$link"
     else
-      PRG="`dirname "$PRG"`/$link"
+      PRG ="`dirname "$PRG"`/$link"
     fi
   done
 
-  saveddir=`pwd`
+  saveddi r=`pwd`
 
-  M2_HOME=`dirname "$PRG"`/..
+  M2_HOME =`dirname "$PRG"`/..
 
   # make it fully qualified
-  M2_HOME=`cd "$M2_HOME" && pwd`
+  M2_HOME =`cd "$M2_HOME" && pwd`
 
   cd "$saveddir"
   # echo Using m2 at $M2_HOME
